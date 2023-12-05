@@ -1,0 +1,7 @@
+@media (min-height:813px){
+    .Mobile-body{
+        margin-top: 50%;
+        margin-bottom: 50%;
+        border-radius: 4rem;
+    }
+}
