@@ -5,7 +5,7 @@
     max-height: 81.2rem;
     margin: auto;
     padding: 4rem;
-    overflow: auto;
+    overflow: hidden;
     background-color: var(--background-color);
 }
 
