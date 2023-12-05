@@ -1,0 +1,8 @@
+
+a{
+    color: var(--sencodary-color);
+    text-decoration: none;
+}
+a:hover{
+    color: black;
+}
