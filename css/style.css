@@ -1,0 +1,25 @@
+
+/* root css */
+@import url(style-css/root.css);
+/* root css */
+
+/* start fiexed class */
+@import url(style-css/tryprogray.css);
+/* end fiexed class */
+
+/* start fiexed class */
+@import url(style-css/fixClass.css);
+/* end fiexed class */
+
+/* header css */
+@import url(style-css/header.css);
+/* header css */
+
+
+/* home section css */
+@import url(style-css/mainstyle.css);
+/* home section css */
+
+/* Responsive css */
+@import url(style-css/Responsive.css);
+/* Responsive css */
