@@ -131,24 +131,17 @@ header {
 
 }
 
-
 .btn-effect span {
     font-size: 2.5rem;
     font-weight: 700;
     text-transform: uppercase;
     color: var(--white-color);
 }
-
-.btn-effect:hover span {
+.spanColor span {
     transition: all 0.3s;
     color: var(--pimary-color);
 }
-.btn-effect:not(:hover) span{
-    color: var(--white-color);
-}
-.btn-effect:not(:focus){
-    color: var(--white-color);
-}
+
 .recording-Types .line {
     width: 100%;
     height: 2rem;
