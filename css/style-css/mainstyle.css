@@ -146,6 +146,9 @@ header {
 .btn-effect:not(:hover) span{
     color: var(--white-color);
 }
+.btn-effect:not(:focus){
+    color: var(--white-color);
+}
 .recording-Types .line {
     width: 100%;
     height: 2rem;
