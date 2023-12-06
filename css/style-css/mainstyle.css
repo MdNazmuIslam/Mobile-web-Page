@@ -152,6 +152,11 @@ header {
     text-transform: uppercase;
     color: var(--white-color);
     clear: both;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
 }
 
 .spanColor {
