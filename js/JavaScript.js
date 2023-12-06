@@ -78,16 +78,16 @@ progress.oninput = (() => {
     sliderValue.style.left = (inputValue * 1.6) + "%";
 })
 // #range-progress
-// hover effect
+// click effect
 var btnEffect = document.querySelectorAll(".recording-Types .btn-effect");
 btnEffect.forEach((btns)=>{
    
-    btns.addEventListener("mouseover",()=>{
+    btns.addEventListener("click",()=>{
         btns.classList.add("spanColor");
     })
 })
 btnEffect.forEach((btns)=>{
-    btns.addEventListener("mouseout",()=>{
+    btns.addEventListener("click",()=>{
         btns.classList.remove("spanColor");
     })
 })
