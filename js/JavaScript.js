@@ -82,12 +82,12 @@ progress.oninput = (() => {
 var btnEffect = document.querySelectorAll(".recording-Types .btn-effect");
 btnEffect.forEach((btns)=>{
    
-    btns.addEventListener("click",()=>{
+    btns.addEventListener("touchstart",()=>{
         btns.classList.add("spanColor");
     })
 })
 btnEffect.forEach((btns)=>{
-    btns.addEventListener("click",()=>{
+    btns.addEventListener("touchend",()=>{
         btns.classList.remove("spanColor");
     })
 })
