@@ -1,0 +1,22 @@
+
+@media (min-height:813px){
+    .Mobile-body{
+        margin-top: 50%;
+        margin-bottom: 50%;
+        border-radius: 4rem;
+    }
+}
+
+@media (min-width:576px){
+    .recording-Types button:hover{
+        cursor: pointer;
+        transition: all 0.3s linear;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        color: var(--pimary-color);
+        outline: none;
+        border: none;
+    }
+}
