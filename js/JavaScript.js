@@ -88,14 +88,14 @@ progress.addEventListener("wheel", function(e){
     e.stopPropagation();
   })
 // // zoom disable
-/*
+
 // Disable zooming using JavaScript
   window.addEventListener('keydown', function(event) {
     if (event.ctrlKey === true && (event.key === '+' || event.key === '-' || event.key === '0')) {
       event.preventDefault();
     }
   });
-
+/*
   function preventZoom() {
     // Disable pinch zooming on mobile devices
     document.addEventListener('touchmove', function(event) {
@@ -109,7 +109,7 @@ progress.addEventListener("wheel", function(e){
   }
   
   preventZoom();
-
+  
 */
 // #range-progress
 // click effect
@@ -139,5 +139,4 @@ function disableScroll() {
     document.body.style.top = `-${scrollY}px`;
     document.body.style.left = `-${scrollX}px`;
   }
-disableScroll();
-
+  disableScroll();
