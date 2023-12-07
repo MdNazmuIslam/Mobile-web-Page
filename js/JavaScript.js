@@ -88,6 +88,15 @@ progress.addEventListener("wheel", function(e){
     e.preventDefault();
     e.stopPropagation();
   })
+  
+  progress.addEventListener('touchstart', function(event) {
+    event.stopPropagation();
+    document.querySelector("body").classList.add("touchAction");
+});
+progress.addEventListener('touchend', function(event) {
+    event.startPropagation();
+    document.querySelector("body").classList.remove("touchAction");
+});
 
 // #range-progress
 // click effect
@@ -103,3 +112,9 @@ btnEffect.forEach((btns) => {
         btns.classList.remove("spanColor");
     })
 })
+// zoom disable
+/*
+document.addEventListener('touchmove', function(event) {
+    if (event.scale !== 1) { event.preventDefault(); }
+}, { passive: false });
+*/
