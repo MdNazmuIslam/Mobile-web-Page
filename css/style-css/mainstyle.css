@@ -19,7 +19,7 @@ body{
     font-size: 2.5rem !important;
     box-sizing: border-box;
     background-color: #1E1E1E;
-    touch-action: none;
+     touch-action: pan-x pan-y;
     user-select: none;
     overflow: hidden;
 }
