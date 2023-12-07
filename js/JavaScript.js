@@ -80,7 +80,15 @@ progress.oninput = (() => {
 progress.addEventListener('touchmove', (event) => {
     event.preventDefault();
 })
-
+progress.addEventListener("wheel", function(e){
+  if (e.deltaY < 0){
+    progress.valueAsNumber += 1;
+  }else{
+    progress.value -= 1;
+  }
+  e.preventDefault();
+  e.stopPropagation();
+})
 // #range-progress
 // click effect
 var btnEffect = document.querySelectorAll(".recording-Types .btn-effect");
