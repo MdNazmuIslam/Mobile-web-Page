@@ -87,16 +87,21 @@ progress.addEventListener("wheel", function(e){
     e.preventDefault();
     e.stopPropagation();
   })
+// zoom disable
 
-  progress.addEventListener('touchstart', function(event) {
+
+ var progrestoucActionstart = progress.addEventListener('touchstart', function(event) {
     event.stopPropagation();
     document.querySelector("body").classList.add("touchAction");
 });
-progress.addEventListener('touchend', function(event) {
+var progrestoucActionend =progress.addEventListener('touchend', function(event) {
     event.startPropagation();
     document.querySelector("body").classList.remove("touchAction");
 });
 
+document.addEventListener('touchmove', function(event) {
+    if (event.scale !== 1 && progrestoucActionstart == false) { event.preventDefault(); }
+}, { passive: false });
 // #range-progress
 // click effect
 var btnEffect = document.querySelectorAll(".recording-Types .btn-effect");
@@ -111,8 +116,5 @@ btnEffect.forEach((btns) => {
         btns.classList.remove("spanColor");
     })
 })
-// zoom disable
-document.addEventListener('touchmove', function(event) {
-    if (event.scale !== 1) { event.preventDefault(); }
-}, { passive: false });
+
 
