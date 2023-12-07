@@ -88,6 +88,7 @@ progress.addEventListener("wheel", function(e){
     e.stopPropagation();
   })
 // // zoom disable
+/*
 // Disable zooming using JavaScript
   window.addEventListener('keydown', function(event) {
     if (event.ctrlKey === true && (event.key === '+' || event.key === '-' || event.key === '0')) {
@@ -109,7 +110,7 @@ progress.addEventListener("wheel", function(e){
   
   preventZoom();
   
-
+*/
 // #range-progress
 // click effect
 var btnEffect = document.querySelectorAll(".recording-Types .btn-effect");
