@@ -20,8 +20,10 @@ body{
     background-color: #1E1E1E;
     touch-action: manipulation;
     user-select: none;
-    touch-action: manipulation;
-    touch-action: none;
+}
+.touchAction{
+    user-select: auto;
+    touch-action: auto;
 }
 
 /* fixclass */
