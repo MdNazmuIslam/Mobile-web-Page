@@ -87,21 +87,21 @@ progress.addEventListener("wheel", function(e){
     e.preventDefault();
     e.stopPropagation();
   })
-// zoom disable
+// // zoom disable
+// Disable zooming using JavaScript
+window.addEventListener('wheel', function(event) {
+    if (event.ctrlKey === true) {
+      event.preventDefault();
+    }
+  }, { passive: false });
+  
+  window.addEventListener('keydown', function(event) {
+    if (event.ctrlKey === true && (event.key === '+' || event.key === '-' || event.key === '0')) {
+      event.preventDefault();
+    }
+  });
+  
 
-
- var progrestoucActionstart = progress.addEventListener('touchstart', function(event) {
-    event.stopPropagation();
-    document.querySelector("body").classList.add("touchAction");
-});
-var progrestoucActionend =progress.addEventListener('touchend', function(event) {
-    event.startPropagation();
-    document.querySelector("body").classList.remove("touchAction");
-});
-
-document.addEventListener('touchmove', function(event) {
-    if (event.scale !== 1 && progrestoucActionstart == false) { event.preventDefault(); }
-}, { passive: false });
 // #range-progress
 // click effect
 var btnEffect = document.querySelectorAll(".recording-Types .btn-effect");
