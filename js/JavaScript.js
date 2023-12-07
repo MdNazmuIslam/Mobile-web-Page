@@ -89,17 +89,25 @@ progress.addEventListener("wheel", function(e){
   })
 // // zoom disable
 // Disable zooming using JavaScript
-window.addEventListener('wheel', function(event) {
-    if (event.ctrlKey === true) {
-      event.preventDefault();
-    }
-  }, { passive: false });
-  
   window.addEventListener('keydown', function(event) {
     if (event.ctrlKey === true && (event.key === '+' || event.key === '-' || event.key === '0')) {
       event.preventDefault();
     }
   });
+
+  function preventZoom() {
+    // Disable pinch zooming on mobile devices
+    document.addEventListener('touchmove', function(event) {
+      if (event.scale !== 1) { event.preventDefault(); }
+    }, { passive: false });
+  
+    // Disable Ctrl + mouse wheel zooming on desktop
+    document.addEventListener('wheel', function(event) {
+      if (event.ctrlKey) { event.preventDefault(); }
+    }, { passive: false });
+  }
+  
+  preventZoom();
   
 
 // #range-progress
@@ -117,4 +125,15 @@ btnEffect.forEach((btns) => {
     })
 })
 
-
+function disableScroll() {
+    // Get the current scroll position
+    var scrollX = window.scrollX || window.pageXOffset;
+    var scrollY = window.scrollY || window.pageYOffset;
+  
+    // Disable scroll by setting the body's style to fixed
+    document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.left = `-${scrollX}px`;
+  }
+disableScroll();
