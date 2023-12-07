@@ -131,6 +131,8 @@ function disableScroll() {
     var scrollY = window.scrollY || window.pageYOffset;
   
     // Disable scroll by setting the body's style to fixed
+    document.body.style.width = '100%';
+    document.body.style.height = '100%';
     document.body.style.overflow = 'hidden';
     document.body.style.position = 'fixed';
     document.body.style.top = `-${scrollY}px`;
