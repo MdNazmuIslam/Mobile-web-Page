@@ -259,6 +259,7 @@ height: 4rem !important;
     user-select: all;
     -webkit-appearance: none;
     appearance: none;
+    user-zoom: auto !important;
     width: 100%;
     height: 1.5rem;
     width: 100%;
@@ -274,9 +275,11 @@ height: 4rem !important;
 .recording-range .field input:active{
     cursor: pointer;
     user-select: all;
+     user-zoom: auto !important;
 } .recording-range .field input:hover{
     cursor: pointer;
     user-select: all;
+     user-zoom: auto !important;
 }
 
  .recording-range .field input::-webkit-slider-runnable-track,
