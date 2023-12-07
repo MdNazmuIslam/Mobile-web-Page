@@ -124,7 +124,7 @@ btnEffect.forEach((btns) => {
         btns.classList.remove("spanColor");
     })
 })
-
+/*
 function disableScroll() {
     // Get the current scroll position
     var scrollX = window.scrollX || window.pageXOffset;
@@ -139,3 +139,4 @@ function disableScroll() {
     document.body.style.left = `-${scrollX}px`;
   }
 disableScroll();
+*/
