@@ -19,10 +19,9 @@ body{
     font-size: 2.5rem !important;
     box-sizing: border-box;
     background-color: #1E1E1E;
-/*      touch-action: pan-x pan-y;
-    user-select: none; */
     overflow: hidden;
     user-zoom: none;
+    user-select: none;
 }
 
 /* fixclass */
@@ -275,11 +274,11 @@ height: 4rem !important;
 .recording-range .field input:active{
     cursor: pointer;
     user-select: all;
-     user-zoom: auto !important;
+    user-zoom: auto !important;
 } .recording-range .field input:hover{
     cursor: pointer;
     user-select: all;
-     user-zoom: auto !important;
+    user-zoom: auto !important;
 }
 
  .recording-range .field input::-webkit-slider-runnable-track,
