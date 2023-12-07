@@ -7,7 +7,7 @@ var timeh = document.querySelector(".time h1");
 var saveProgram = document.querySelector(".saveProgram");
 var submit = document.querySelector(".saveProgram #submit");
 
-let [seconds, minutes, hours] = [0, 0, 0];
+var [seconds, minutes, hours] = [0, 0, 0];
 let timer = null;
 
 
@@ -29,6 +29,7 @@ stopBtn.addEventListener("click", () => {
 submit.addEventListener("click", () => {
     saveProgram.classList.remove("showSP");
     location.reload();
+    clearInterval(timer);
 })
 
 function stopwatch() {
@@ -41,29 +42,27 @@ function stopwatch() {
             hours++;
         }
     }
-    let h = hours < 10 ? "0" + hours : hours;
-    let m = minutes < 10 ? "0" + minutes : minutes;
-    let s = seconds < 10 ? "0" + seconds : seconds;
+     var h = hours < 10 ? "0" + hours : hours;
+     var m = minutes < 10 ? "0" + minutes : minutes;
+     var s = seconds < 10 ? "0" + seconds : seconds;
 
     timeh.innerHTML = m + ":" + s;
 
 }
 
 function watchStart() {
-
     if (timer !== null) {
         clearInterval(timer)
     }
     timer = setInterval(stopwatch, 1000);
-
 }
 
 function watchReset() {
-   
     clearInterval(timer);
-    let [seconds, minutes, hours] = [0, 0, 0];
+    seconds =0;
+    minutes=0;
+    hours=0;
     timeh.innerHTML = "00:00";
-
 }
 
 // #time start and reset
@@ -88,7 +87,7 @@ progress.addEventListener("wheel", function(e){
     e.preventDefault();
     e.stopPropagation();
   })
-  
+
   progress.addEventListener('touchstart', function(event) {
     event.stopPropagation();
     document.querySelector("body").classList.add("touchAction");
@@ -113,7 +112,6 @@ btnEffect.forEach((btns) => {
     })
 })
 // zoom disable
-
 document.addEventListener('touchmove', function(event) {
     if (event.scale !== 1) { event.preventDefault(); }
 }, { passive: false });
