@@ -273,11 +273,11 @@ height: 4rem !important;
 }
 .recording-range .field input:active{
     cursor: pointer;
-    user-select: all;
+    user-select: auto;
     user-zoom: auto !important;
 } .recording-range .field input:hover{
     cursor: pointer;
-    user-select: all;
+    user-select: auto;
     user-zoom: auto !important;
 }
 
