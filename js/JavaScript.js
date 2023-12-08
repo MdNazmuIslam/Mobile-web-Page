@@ -95,22 +95,7 @@ progress.addEventListener("wheel", function(e){
       event.preventDefault();
     }
   });
-/*
-  function preventZoom() {
-    // Disable pinch zooming on mobile devices
-    document.addEventListener('touchmove', function(event) {
-      if (event.scale !== 1) { event.preventDefault(); }
-    }, { passive: false });
-  
-    // Disable Ctrl + mouse wheel zooming on desktop
-    document.addEventListener('wheel', function(event) {
-      if (event.ctrlKey) { event.preventDefault(); }
-    }, { passive: false });
-  }
-  
-  preventZoom();
-  
-*/
+
 // #range-progress
 // click effect
 var btnEffect = document.querySelectorAll(".recording-Types .btn-effect");
@@ -151,14 +136,15 @@ function disableScroll() {
   }
 
   function toggleFullsreen(){
-    if(getFullsreenElement){
+    if(getFullsreenElement()){
       document.exitFullscreen();
     }else{
       document.documentElement.requestFullscreen();
     }
-  }
+  } 
 
 document.addEventListener("dblclick",()=>{
- toggleFullsreen()
+  toggleFullsreen();
 })
+
 
