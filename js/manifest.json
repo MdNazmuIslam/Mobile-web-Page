@@ -1,0 +1,19 @@
+{
+    "name": "RECORDING WEBSITE",
+    "short_name": "RECORD",
+    "start_url": "../index.html",
+    "display": "fullscreen",
+    "icons": [
+      {
+        "src": "images/icons/wifi-icon-green.png",
+        "sizes": "30",
+        "type": "image/png"
+      },
+      {
+        "src": "images/icons/wifi-icon.png",
+        "sizes": "30",
+        "type": "image/png"
+      }
+    ]
+  }
+  
