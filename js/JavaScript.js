@@ -141,17 +141,24 @@ function disableScroll() {
   }
   disableScroll();
   
-  document.addEventListener('DOMContentLoaded', function() {
-    var elem = document.documentElement;
+  // full sreen function
 
-    // Check if the Fullscreen API is available
-    if (elem.requestFullscreen) {
-      elem.requestFullscreen();
-    } else if (elem.mozRequestFullScreen) { /* Firefox */
-      elem.mozRequestFullScreen();
-    } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
-      elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) { /* IE/Edge */
-      elem.msRequestFullscreen();
+  function getFullsreenElement(){
+    return document.fullscreenElement
+        || document.webkitRequestFullscreen
+        || document.mozRequestFullScreen
+        || document.msRequestFullscreen
+  }
+
+  function toggleFullsreen(){
+    if(getFullsreenElement){
+      document.exitFullscreen();
+    }else{
+      document.documentElement.requestFullscreen();
     }
-  });
+  }
+
+document.addEventListener("dblclick",()=>{
+ toggleFullsreen()
+})
+
