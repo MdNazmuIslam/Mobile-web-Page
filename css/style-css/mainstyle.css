@@ -234,7 +234,6 @@ height: 4rem !important;
     -o-border-radius: 1.5rem;
 }
 
-
 .recording-range .field .value {
     position: absolute;
     font-size: 1.2rem;
@@ -556,6 +555,8 @@ form {
     }
 }
 
+
+
 @media (min-width:576px){
     .Mobile-body {
         width: 100%;
@@ -565,9 +566,11 @@ form {
     }
     .recording-range {
         max-width: 28.3rem;
+        margin: 18% auto;
     }
     .recording-btn button {
         max-width: 28.2rem;
+        margin: auto;
     }
     .recording-Types button:hover{
         cursor: pointer;
@@ -579,5 +582,42 @@ form {
         color: var(--pimary-color);
         outline: none;
         border: none;
+    }
+}
+@media (max-height:720px){
+    .btn-effect {
+        width: 7.4rem;
+        height: 7.4rem;
+        margin-top: 3%;
+      }
+    .recording-Types .M1, .recording-Types .M2 {
+        width: 8.4rem;
+        height: 8.4rem;
+      }
+      .recording-range {
+       margin-top: 15%;
+       margin-bottom: 7%;
+    }
+}
+@media (max-height:650px){
+    .time {
+        margin-top: 5% !important;
+        margin-bottom: 10% !important;
+      }
+      .time h1{
+        font-size: 3.6rem;
+      }
+    .btn-effect {
+        width: 6.4rem;
+        height: 6.4rem;
+        margin-top: 1.5%;
+      }
+    .recording-Types .M1, .recording-Types .M2 {
+        width: 7.4rem;
+        height: 7.4rem;
+      }
+      .recording-range {
+       margin-top: 15%;
+       margin-bottom: 7%;
     }
 }
